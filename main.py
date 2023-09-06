@@ -63,7 +63,7 @@ async def spam_fruitSpace_1(database_two):
             'secret': "Wmfv3899gc9"
         }
         headers = {'User-Agent': '', 'Content-Type': 'application/x-www-form-urlencoded'}
-        proxy = {'http": random.choice(open("./proxies", r encoding="utf-8").readlines()), 'https': random.choice(open("./proxies", r encoding="utf-8").readlines())}
+        proxy = {'http': random.choice(open("./proxies", 'r', encoding="utf-8").readlines()), 'https': random.choice(open("./proxies", 'r', encoding="utf-8").readlines())}
                    
         async with aiohttp.ClientSession() as session:
             RequestRegister = await session.post(database_two + "accounts/registerGJAccount.php",
@@ -159,4 +159,3 @@ else:
     clear_console()
     print("bye")
     exit()
-
